@@ -1,0 +1,9 @@
+<h3>Favorite Authors</h3>
+<a [routerLink]="['/home']">Home</a>
+<form (submit)="addAuthorFromService()">
+  <label for="newAuthor.name">Name:</label><br>
+  <input type="text" name="newAuthor.name" [(ngModel)]="newAuthor.name"><br>
+  <label for="newAuthor.quote">Quote:</label><br>
+  <input type="text" name="newAuthor.quote" [(ngModel)]="newAuthor.quote"><br>
+  <input type="submit" value="Add">
+</form>

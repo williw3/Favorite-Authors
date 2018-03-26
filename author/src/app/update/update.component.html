@@ -1,0 +1,11 @@
+<h3>Favorite Authors</h3>
+<a [routerLink]="['/home']">Home</a>
+<form (submit)="editAuthorFromService()">
+    <input type="hidden" name="editAuthor.id" id=""[(ngModel)]="editAuthor.id"><br>
+    <label for="editAuthorname">Name:</label><br>
+    <input type="text" name="editAuthorname" [(ngModel)]="editAuthor.name"><br>
+    <label for="editAuthor.quote">Quote:</label><br>
+    <textarea name="editAuthor.quote" id="" cols="30" rows="4"[(ngModel)]="editAuthor.quote"></textarea><br>
+    <!-- <input type="text" name="editAuthor.quote" [(ngModel)]="editAuthor.quote"><br> -->
+    <input type="submit" value="Add">
+</form>

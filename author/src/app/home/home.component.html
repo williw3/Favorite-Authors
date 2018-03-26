@@ -1,0 +1,14 @@
+<h3>Favorite Authors</h3>
+<button [routerLink]="['/new']">Add Author</button>
+  <table>
+    <tr>
+      <th>Author</th>
+      <th>Quote</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let auth of authors">
+      <td class="quote">{{ auth.name }}</td>
+      <td class="quote">{{ auth.quote }}</td>
+      <td><button [routerLink]="['/update/', auth._id]">Edit</button> | <button [routerLink]="['/delete/', auth._id]" >Delete</button></td>
+    </tr>
+  </table>
